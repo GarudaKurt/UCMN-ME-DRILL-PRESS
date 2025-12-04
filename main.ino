@@ -74,11 +74,13 @@ void loop() {
   }
 
   if (digitalRead(btnForward) == LOW) {
+    Serial.println("Forwards");
     control.manualForwardStep();
-  } else if (digitalRead(btnReverse) == LOW) {
+  } 
+  if (digitalRead(btnReverse) == LOW) {
+    Serial.println("Reverse");
     control.manualReverseStep();
-  } else {
-    control.stopMotor();
-  }
+  } 
+
 }
 
